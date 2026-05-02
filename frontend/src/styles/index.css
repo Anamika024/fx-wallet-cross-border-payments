@@ -8,21 +8,66 @@
 
 body {
   margin: 0;
+  background: #f4f7f6;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 .input {
-  @apply w-full rounded-md border border-line bg-white px-3 py-2 text-sm outline-none transition focus:border-teal focus:ring-2 focus:ring-teal/20;
+  @apply w-full rounded-md border border-line bg-white px-3 py-2 text-sm outline-none transition placeholder:text-slate-400 focus:border-teal focus:ring-2 focus:ring-teal/20;
 }
 
 .btn-primary {
-  @apply inline-flex items-center justify-center rounded-md bg-teal px-4 py-2 text-sm font-semibold text-white transition hover:bg-teal/90;
+  @apply inline-flex items-center justify-center rounded-md bg-teal px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-[#085041];
 }
 
 .btn-secondary {
-  @apply inline-flex items-center justify-center rounded-md border border-teal px-4 py-2 text-sm font-semibold text-teal transition hover:bg-teal hover:text-white;
+  @apply inline-flex items-center justify-center rounded-md border border-emerald-200 bg-emerald-50 px-4 py-2 text-sm font-semibold text-teal transition hover:bg-teal hover:text-white;
 }
 
 .icon-btn {
-  @apply inline-flex h-9 w-9 items-center justify-center rounded-md border border-line bg-white text-ink transition hover:border-teal hover:text-teal;
+  @apply inline-flex h-9 w-9 items-center justify-center rounded-md border border-line bg-white text-ink shadow-sm transition hover:border-teal hover:text-teal;
+}
+
+.nav-pill {
+  @apply inline-flex shrink-0 items-center gap-2 rounded-md px-3 py-2 text-xs font-medium text-slate-600 transition hover:bg-white hover:text-ink;
+}
+
+.nav-pill-active {
+  @apply bg-emerald-100 text-teal shadow-sm;
+}
+
+.surface-card {
+  @apply rounded-md border border-line bg-white p-4 shadow-sm;
+}
+
+.section-label {
+  @apply text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-500;
+}
+
+.metric-card {
+  @apply rounded-md border border-line bg-white p-4 shadow-sm;
+}
+
+.metric-value {
+  @apply mt-1 text-2xl font-semibold tracking-tight text-ink;
+}
+
+.status-pill {
+  @apply inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.04em];
+}
+
+.status-done {
+  @apply bg-emerald-50 text-teal ring-1 ring-emerald-100;
+}
+
+.status-pending {
+  @apply bg-amber-50 text-amber-700 ring-1 ring-amber-100;
+}
+
+.status-review {
+  @apply bg-indigo-50 text-indigo-700 ring-1 ring-indigo-100;
+}
+
+.status-fail {
+  @apply bg-red-50 text-red-700 ring-1 ring-red-100;
 }

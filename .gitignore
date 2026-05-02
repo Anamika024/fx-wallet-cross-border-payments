@@ -3,6 +3,7 @@
 *.log
 
 backend/target/
+backend/data/
 frontend/dist/
 frontend/node_modules/
 

@@ -20,10 +20,11 @@ export default function Register() {
   }
 
   return (
-    <main className="grid min-h-screen place-items-center bg-mist px-4">
-      <section className="w-full max-w-md rounded-md border border-line bg-white p-6">
-        <p className="text-xs font-semibold uppercase text-teal">FX Wallet</p>
-        <h1 className="mb-6 text-2xl font-semibold">Create account</h1>
+    <main className="grid min-h-screen place-items-center bg-mist px-4 py-10">
+      <section className="w-full max-w-md rounded-md border border-line bg-white p-6 shadow-xl">
+        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-teal">FX Wallet</p>
+        <h1 className="mb-2 mt-2 text-2xl font-semibold">Create account</h1>
+        <p className="mb-6 text-sm text-slate-500">Start with an INR wallet and add global currency wallets later.</p>
         <form onSubmit={submit} className="space-y-4">
           <input className="input" placeholder="Full name" value={form.fullName} onChange={(e) => setForm({ ...form, fullName: e.target.value })} />
           <input className="input" placeholder="Email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
