@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/fxwallet}
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/fxwallet?currentSchema=fxwallet}
     username: ${SPRING_DATASOURCE_USERNAME:fxwallet}
     password: ${SPRING_DATASOURCE_PASSWORD:fxwallet}
   h2:
@@ -8,3 +8,9 @@ spring:
       enabled: false
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        default_schema: ${DB_SCHEMA:fxwallet}
+  flyway:
+    schemas: ${DB_SCHEMA:fxwallet}
+    default-schema: ${DB_SCHEMA:fxwallet}

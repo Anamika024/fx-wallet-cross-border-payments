@@ -50,9 +50,10 @@ services:
       - mailhog
     environment:
       SPRING_PROFILES_ACTIVE: postgres
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/fxwallet
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/fxwallet?currentSchema=fxwallet
       SPRING_DATASOURCE_USERNAME: fxwallet
       SPRING_DATASOURCE_PASSWORD: fxwallet
+      DB_SCHEMA: fxwallet
       JWT_SECRET: replace-with-at-least-32-characters-secret
       MAIL_HOST: mailhog
       MAIL_PORT: 1025
